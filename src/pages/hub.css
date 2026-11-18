@@ -1,0 +1,880 @@
+
+/* ========================================
+   CABEÇALHO E NAVEGAÇÃO
+======================================== */
+:where(.hub:where(:not(.fisioterapia-page))) .landing-header {
+  --header-bg: var(--cor-azul-pkz);
+
+  position: absolute;
+  z-index: 20;
+  top: 14px;
+  left: 50%;
+  display: flex;
+  width: calc(100% - 24px);
+  max-width: var(--wrap-max);
+  min-height: 64px;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 18px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: var(--header-bg);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+.hub:where(:not(.fisioterapia-page)) .landing-header {
+  --header-bg: #141414;
+  font-family: "Outfit", Arial, sans-serif;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.22);
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-header-brands {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .hub-header-brands .hub-brand {
+  display: flex;
+  width: 118px;
+  height: 44px;
+  align-items: center;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .hub-header-brands .oto-brand {
+  width: 82px;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .hub-header-brands img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .brand-divider {
+  width: 1px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.58);
+}
+:where(.hub:where(:not(.fisioterapia-page))) .menu-toggle {
+  display: grid;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  margin-left: auto;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .landing-nav {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  left: 0;
+  display: none;
+  padding: 8px 18px;
+  max-height: calc(100dvh - 120px);
+  overflow-y: auto;
+  border-radius: 18px;
+  background: var(--header-bg);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .landing-nav.is-open {
+  display: block;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .landing-nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .landing-nav a {
+  display: block;
+  padding: 13px 4px;
+  font-size: 1rem;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .student-link,
+:where(.hub:where(:not(.fisioterapia-page))) .landing-header .header-cta {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-header {
+    top: 30px;
+    width: 92%;
+    min-height: 82px;
+    gap: 1.8vw;
+    padding: 10px 30px;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .menu-toggle {
+    display: none;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-nav {
+    position: static;
+    display: block;
+    max-height: none;
+    overflow: visible;
+    max-height: none;
+    overflow: visible;
+    margin-left: auto;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.8vw;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .student-link {
+    display: inline;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-header .header-cta {
+    display: inline-flex;
+  }
+}
+:where(.hub:where(:not(.fisioterapia-page))) .landing-nav .hub-contact-trigger {
+  display: block;
+  width: 100%;
+  padding: 13px 4px;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+@media (min-width: 1025px) {
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-nav .hub-contact-trigger {
+    width: auto;
+  }
+}
+.hub:where(:not(.fisioterapia-page)) .landing-header {
+  position: fixed;
+  width: 92%;
+  max-width: 1300px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+}
+:where(.hub:where(:not(.fisioterapia-page))) .landing-header .header-contact-link {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: filter 0.2s ease;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .landing-header .header-contact-link:hover {
+  filter: brightness(0.92);
+}
+:where(.hub:where(:not(.fisioterapia-page))) .landing-nav .contact-link-mobile a {
+  display: block;
+  margin-top: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-align: center;
+}
+.hub:where(:not(.fisioterapia-page)) section[id] {
+  scroll-margin-top: 120px;
+}
+
+@media (min-width: 1025px) {
+  .hub:where(:not(.fisioterapia-page)) .landing-header {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto
+      minmax(0, 1fr);
+    align-items: center;
+    gap: 20px;
+  }
+  .hub:where(:not(.fisioterapia-page)) .landing-nav {
+    margin-left: 0;
+    justify-self: center;
+  }
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-nav .contact-link-mobile {
+    display: none;
+  }
+}
+:where(.hub:where(:not(.fisioterapia-page))) .landing-header .landing-nav a,
+:where(.hub:where(:not(.fisioterapia-page))) .landing-header .landing-nav .nav-inactive {
+  display: inline-block;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+@media (hover: hover) {
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-header .landing-nav a:hover,
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-header .landing-nav .nav-inactive:hover {
+    transform: translateY(-3px);
+  }
+
+  .hub:where(:not(.fisioterapia-page)) .landing-nav a:hover,
+  .hub:where(:not(.fisioterapia-page)) .landing-nav .nav-inactive:hover {
+    color: #0F57C0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-header .landing-nav a,
+:where(.hub:where(:not(.fisioterapia-page))) .landing-header .landing-nav .nav-inactive {
+    transition: none;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-header .landing-nav a:hover,
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-header .landing-nav .nav-inactive:hover {
+    transform: none;
+  }
+}
+:where(.hub:where(:not(.fisioterapia-page))) .landing-nav .nav-inactive {
+  display: inline-block;
+  padding: 13px 4px;
+  font-size: 1rem;
+  cursor: default;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .landing-header .header-contato {
+  display: none;
+}
+
+.hub:where(:not(.fisioterapia-page)) .header-contato,
+.hub:where(:not(.fisioterapia-page)) .contato-mobile .hub-contact-trigger {
+  border: 0;
+  border-radius: 999px;
+  background: #0F57C0;
+  color: #fff;
+  font: 700 1rem "Outfit", Arial, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hub:where(:not(.fisioterapia-page)) .contato-mobile .hub-contact-trigger {
+  margin-block: 8px;
+  padding: 12px 18px;
+}
+
+@media (min-width: 1025px) {
+  .hub:where(:not(.fisioterapia-page)) .landing-header .header-contato {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
+    min-width: 144px;
+    min-height: 42px;
+    padding: 10px 24px;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-nav .contato-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  :where(.hub:where(:not(.fisioterapia-page))) .hub-header-brands {
+    gap: 8px;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .hub-header-brands .hub-brand {
+    width: 98px;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .hub-header-brands .oto-brand {
+    width: 70px;
+  }
+}
+
+/* ========================================
+   HERO E SETA DE ROLAGEM
+======================================== */
+.hub:where(:not(.fisioterapia-page)) .landing-hero {
+  position: relative;
+  display: flex;
+  min-height: 100svh;
+  height: auto;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 6% 64px;
+  overflow: hidden;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
+
+.hub:where(:not(.fisioterapia-page)) .landing-hero .hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.hub:where(:not(.fisioterapia-page)) .landing-hero h1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  margin: 0;
+  font-family: CocogooseProTrial, "Outfit", Arial, sans-serif;
+  font-size: clamp(1rem, 5vw, 6rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hub:where(:not(.fisioterapia-page)) .landing-hero h1 span {
+  display: inline-block;
+  line-height: 1;
+}
+.hub:where(:not(.fisioterapia-page)) .landing-hero .hero-inner > p {
+  max-width: 800px;
+  margin: 30px auto 0;
+  font-size: clamp(1rem, 1.7vw, 1.5rem);
+  line-height: 1.3;
+  text-align: center;
+}
+.hub:where(:not(.fisioterapia-page)) .landing-hero .scroll-cue {
+  position: absolute;
+  z-index: 2;
+  right: 50%;
+  bottom: 0;
+  display: grid;
+  width: 184px;
+  height: 44px;
+  place-items: center;
+  transform: translateX(50%);
+  border-radius: 0;
+  clip-path: path("M 0 44 H 13 C 51 44 50 0 92 0 C 134 0 133 44 171 44 H 184 Z");
+}
+
+.hub:where(:not(.fisioterapia-page)) .landing-hero .scroll-cue span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+.hub:where(:not(.fisioterapia-page)) .landing-hero h1 > br {
+  display: none;
+}
+
+.hub:where(:not(.fisioterapia-page)) .oto-hero h1 span {
+  font-size: 1.32em;
+  line-height: 1.15;
+}
+
+.hub:where(:not(.fisioterapia-page)) .oto-hero .hero-inner > p {
+  font-size: 1.5rem;
+}
+@media (max-width: 767px) {
+  .hub:where(:not(.fisioterapia-page)) .landing-hero {
+    height: auto;
+    min-height: 100svh;
+    padding: 120px 6% 72px;
+    justify-content: center;
+  }
+
+  .hub:where(:not(.fisioterapia-page)) .landing-hero h1 {
+    font-size: clamp(1rem, 7vw, 2.8rem);
+    line-height: 1.15;
+  }
+
+  .hub:where(:not(.fisioterapia-page)) .landing-hero .hero-inner > p {
+    font-size: clamp(0.95rem, 3.7vw, 1.15rem);
+  }
+
+  .hub:where(:not(.fisioterapia-page)) .oto-hero .hero-inner > p {
+    font-size: clamp(0.95rem, 3.7vw, 1.15rem);
+  }
+}
+@keyframes scrollArrowFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(45deg);
+  }
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .landing-hero .scroll-cue span {
+  animation: scrollArrowFloat 1.8s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  :where(.hub:where(:not(.fisioterapia-page))) .landing-hero .scroll-cue span {
+    animation: none;
+  }
+}
+
+/* ========================================
+   APRESENTAÇÃO DA FISIOTERAPIA
+======================================== */
+.hub:where(:not(.fisioterapia-page)) .fisio-about {
+  padding: 24px 0 96px;
+  background: #fff;
+  color: #53616a;
+}
+
+.hub:where(:not(.fisioterapia-page)) .fisio-about .about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 44px;
+  width: calc(100% - 2 * var(--gutter));
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+.hub:where(:not(.fisioterapia-page)) .fisio-about .about-photo {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.hub:where(:not(.fisioterapia-page)) .fisio-about .about-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.hub:where(:not(.fisioterapia-page)) .fisio-about .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 22px;
+  color: #53616a;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.hub:where(:not(.fisioterapia-page)) .fisio-about .eyebrow::before {
+  content: '';
+  width: 48px;
+  height: 1px;
+  background: #969696;
+}
+
+.hub:where(:not(.fisioterapia-page)) .fisio-about h2 {
+  color: var(--cor-azul-escuro-oto);
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.hub:where(:not(.fisioterapia-page)) .fisio-about h2 span {
+  color: var(--cor-hub-azul);
+}
+
+.hub:where(:not(.fisioterapia-page)) .fisio-about .about-content > p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.hub:where(:not(.fisioterapia-page)) .fisio-button {
+  margin-top: 16px;
+  min-width: 200px;
+  background: #0F57C0;
+}
+
+.hub:where(:not(.fisioterapia-page)) .fisio-button:hover {
+  filter: brightness(0.92);
+}
+
+@media (max-width: 767px) {
+  .hub:where(:not(.fisioterapia-page)) .fisio-about {
+    padding-bottom: 64px;
+  }
+
+  .hub:where(:not(.fisioterapia-page)) .fisio-about .about-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+
+/* ========================================
+   IDENTIDADE, CONTEÚDO, CONTATOS E RODAPÉ
+======================================== */
+.hub:where(:not(.fisioterapia-page)) {
+  background: #fff;
+  color: var(--cor-hub-escuro);
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+.hub:where(:not(.fisioterapia-page)) h2,
+.hub:where(:not(.fisioterapia-page)) h3 {
+  font-family: CocogooseProTrial, "Outfit", Arial, sans-serif;
+  font-weight: 700;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .hub-wrap {
+  width: calc(100% - 2 * var(--gutter));
+  max-width: 1120px;
+  margin-inline: auto;
+}
+.hub:where(:not(.fisioterapia-page)) .hub-hero {
+  font-family: "Outfit", Arial, sans-serif;
+  justify-content: center;
+  color: #fff;
+  background-color: #0d1114;
+  background-image:
+    linear-gradient(90deg, rgba(6, 10, 15, 0.62), rgba(6, 10, 15, 0.38) 55%, rgba(6, 10, 15, 0.12)),
+    linear-gradient(0deg, rgba(6, 10, 15, 0.45), rgba(6, 10, 15, 0) 40%),
+    url("/imagens/imagens-padronizacao/assets/hub/WhatsApp_Image_2026-09-19_at_19.57.55_2.jpg");
+}
+.hub:where(:not(.fisioterapia-page)) .hub-hero.oto-hero h1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  font-family: CocogooseProTrial, "Outfit", Arial, sans-serif;
+  font-size: clamp(1rem, 4.7vw, 4rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hub:where(:not(.fisioterapia-page)) .hub-hero.oto-hero h1 > br {
+  display: none;
+}
+
+.hub:where(:not(.fisioterapia-page)) .hub-hero.oto-hero h1 span {
+  color: var(--cor-hub-azul);
+  font-size: 1.32em;
+  line-height: 1.15;
+  white-space: nowrap;
+  transform: none;
+}
+
+.hub:where(:not(.fisioterapia-page)) .hub-hero.oto-hero .hero-inner > p {
+  transform: none;
+}
+
+.hub:where(:not(.fisioterapia-page)) .hub-hero .scroll-cue {
+  background: #fff;
+  color: var(--cor-hub-escuro);
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-companies {
+  --company-text: #53616a;
+  padding: clamp(88px, 7vw, 120px) 0 72px;
+  background: #fff;
+  color: var(--company-text);
+  font-family: "Outfit", Arial, sans-serif;
+  text-align: center;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .hub-companies-heading {
+  max-width: 860px;
+  margin: 0 auto 52px;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .hub-kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 22px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .hub-kicker::before,
+:where(.hub:where(:not(.fisioterapia-page))) .hub-kicker::after {
+  content: "";
+  width: 48px;
+  height: 1px;
+  background: #969696;
+}
+
+.hub:where(:not(.fisioterapia-page)) .hub-companies h2 {
+  color: var(--cor-azul-escuro-oto);
+  font-family: "CocogooseProTrial", "Outfit", Arial, sans-serif;
+  font-size: clamp(1.35rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .hub-companies h2 span {
+  color: var(--cor-hub-azul);
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .hub-companies-intro {
+  max-width: 600px;
+  margin: 30px auto 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .company-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 36px;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .company-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 14px;
+  border-radius: 20px;
+  border: 1px solid #dfe6e9;
+  background: #f5f8fa;
+  transition: transform 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hub:where(:not(.fisioterapia-page)) .company-card:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hub:where(:not(.fisioterapia-page)) .company-card {
+    transition: none;
+  }
+
+  .hub:where(:not(.fisioterapia-page)) .company-card:hover {
+    transform: none;
+  }
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .company-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.8;
+  overflow: hidden;
+  background: #071a3a;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .company-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .company-image h3 {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .company-logo {
+  width: 50%;
+  max-height: 40%;
+  object-fit: contain;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .oto-card-image .company-logo {
+  width: 42%;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .company-copy {
+  width: 100%;
+  padding: 24px 30px 0;
+  color: var(--company-text);
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .company-copy p {
+  margin-bottom: 20px;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .hub-button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 12px 24px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .pkz-button {
+  background: var(--cor-azul-pkz);
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .oto-button {
+  background: var(--cor-azul-oto);
+}
+
+@media (min-width: 768px) {
+  :where(.hub:where(:not(.fisioterapia-page))) .hub-companies .hub-wrap {
+    width: 85%;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .company-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5vw;
+    max-width: none;
+  }
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-contact-trigger {
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-contact-dialog {
+  width: min(92vw, 480px);
+  max-width: calc(100% - 32px);
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  padding: 28px 22px 24px;
+  border: 0;
+  border-radius: 20px;
+  color: var(--cor-hub-escuro);
+  background: #fff;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-contact-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-contact-dialog-content {
+  position: relative;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-contact-dialog h2 {
+  margin: 0 44px 20px 0;
+  color: var(--cor-hub-azul);
+  font: 700 1.3rem/1.25 CocogooseProTrial, "Outfit", Arial, sans-serif;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-contact-options {
+  display: grid;
+  gap: 12px;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-contact-option {
+  display: flex;
+  min-height: 60px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .pkz-contact-option {
+  background: var(--cor-azul-pkz);
+  color: #fff;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .oto-contact-option {
+  background: var(--cor-azul-oto);
+  color: var(--cor-azul-noite-oto);
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-contact-close {
+  position: absolute;
+  top: -14px;
+  right: -8px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: #f2f2f2;
+  color: var(--cor-hub-escuro);
+  font: 400 1.5rem/1 "Outfit", Arial, sans-serif;
+  cursor: pointer;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-footer {
+  padding: 30px 0;
+  background: #141414;
+  color: #fff;
+  text-align: center;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-footer-inner {
+  display: grid;
+  justify-items: center;
+  gap: 26px;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .footer-brands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .footer-brands img:first-child {
+  width: min(200px, 45vw);
+  height: 36px;
+  object-fit: contain;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .footer-brands img:last-child {
+  width: min(130px, 29vw);
+  max-height: 54px;
+  object-fit: contain;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-footer .brand-divider {
+  height: 44px;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .footer-nav {
+  color: #c4c4c4;
+  font-size: 0.9rem;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 24px;
+}
+
+:where(.hub:where(:not(.fisioterapia-page))) .footer-nav a,
+:where(.hub:where(:not(.fisioterapia-page))) .footer-nav .hub-contact-trigger {
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+:where(.hub:where(:not(.fisioterapia-page))) .hub-footer small {
+  color: #8f8f8f;
+  font-size: 0.78rem;
+}
+
+/* ========================================
+   RESPONSIVIDADE - RODAPÉ
+======================================== */
+
+@media (min-width: 768px) {
+  :where(.hub:where(:not(.fisioterapia-page))) .hub-footer {
+    padding: 28px 0 30px;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .hub-footer-inner {
+    gap: 34px;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .footer-nav {
+    font-size: 0.86rem;
+  }
+
+  :where(.hub:where(:not(.fisioterapia-page))) .footer-nav ul {
+    gap: 4px 32px;
+  }
+}

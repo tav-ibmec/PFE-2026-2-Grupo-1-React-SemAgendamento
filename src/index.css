@@ -1,0 +1,123 @@
+
+/* ========================================
+   BASE GLOBAL, ACESSIBILIDADE E VARIÁVEIS
+======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+dialog {
+  margin: auto;
+}
+
+@font-face {
+  font-family: CocogooseProTrial;
+  src: url("/imagens/imagens-padronizacao/assets/Cocogoose-Pro-Bold-trial%20(1).ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth; 
+  -webkit-text-size-adjust: 100%; 
+  text-size-adjust: 100%;
+}
+
+body {
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+nav ul {
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 12px;
+  left: 12px;
+  padding: 10px 16px;
+  transform: translateY(-160%);
+  border-radius: 5px;
+  background: #fff;
+  color: #111;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+  color: #000;
+  background: #fff;
+}
+
+:root {
+  --cor-amarelo-pkz: #f1f000;
+  --cor-azul-pkz: #000080;
+  --cor-azul-claro-pkz: #3eb5e9;
+  --cor-preto-pkz: #141414;
+  --cor-azul-oto: #0898dd;
+  --cor-azul-escuro-oto: #033651;
+  --cor-azul-noite-oto: #001a27;
+  --cor-azul-gelo-oto: #b3ecff;
+  --cor-hub-escuro: #101820;
+  --cor-hub-azul: #315bc0;
+
+  --gutter: 20px; 
+  --wrap-max: 1560px; 
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 40px;
+  }
+}
+
+@media (min-width: 1201px) {
+  :root {
+    --gutter: 6vw;
+  }
+}
